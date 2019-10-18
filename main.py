@@ -2,7 +2,6 @@
 import json
 import sys
 from flask import Flask, request
-import meinheld
 
 import cert_issuer.config
 from cert_issuer.blockchain_handlers import bitcoin
@@ -11,9 +10,7 @@ import cert_issuer.issue_certificates
 app = Flask(__name__)
 config = None
 
-meinheld.set_max_content_length((2**10)**3)
-
-# Clear gunicorn's config out of our argv
+# Clear container's config out of our argv
 sys.argv = [sys.argv[0]]
 
 

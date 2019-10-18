@@ -1,4 +1,4 @@
-FROM tiangolo/meinheld-gunicorn:python3.6
+FROM tiangolo/uwsgi-nginx-flask:python3.6
 
 RUN pip3 --no-cache-dir install --upgrade pip
 RUN pip3 --no-cache-dir install cert-issuer
